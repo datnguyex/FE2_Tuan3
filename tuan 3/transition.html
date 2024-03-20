@@ -5,218 +5,111 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        body
-        {
-            background-color: white;
-        }
-        .wrap-box
-        {
-         width: 190px;
-         background-color: #fff;
-         position: fixed;
-         overflow: hidden;
-         position: fixed;
-         left: calc(100% - 185px);
-         top: calc(50% - 220px);
-
-        }
-            .box1 {
-            width: 60px;
-            height: 60px;
-            background: url(sidemenu-icons.png);
-            transition: 0.01;
-            background-position: 0px 600px;
-            float: right;
-           clear: both;
-           margin-right: 15px;
-           position: relative;
-           
-        
+        body{
+            background-color: brown;
         } 
-        .box11
-        {
-            border-radius: 10px;
-            width: 110px;
-            height: 60px;
+
+        .box {
             position: absolute;
-            background-color: black;
-            z-index: -1;
-            opacity: 0;
-            text-align: center;
-            line-height: 55px;
-            color: white;
+            top: calc(50% - 150px);
+            right: 20px;
+            background-color: white;
+            padding: 10px;
+            border-radius: 2px;
+            box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.5);
         }
-        .box2 {
+        .box:hover {
+            background-position: 0 -120px;
+        }
+
+        .box__item {
             width: 60px;
-            height: 60px;
-            background: url(sidemenu-icons.png);
-            transition: 0.01s;
-            background-position: 0px 480px;
-            float: right;
-           clear: both;
-           margin-right: 15px;
-           margin-top: 30px;  
+            height: 60px; 
+            background: url(sidemenu-icons.png) no-repeat;
+            margin: 10px;
+            cursor: pointer;
         }
-        .box22
-        {
-            border-radius: 10px;
-            width: 110px;
+        
+        .box__item:nth-child(1) {
+            background-position: 0 0px;
+        }
+
+        .box__item:nth-child(2) {
+            background-position: 0 -120px;
+        }
+
+        .box__item:nth-child(3) {
+            background-position: 0 -240px;
+        }
+
+        .box__item:nth-child(4) {
+            background-position: 0 -360px;
+        }
+
+        .box__item:nth-child(5) {
+            background-position: 0 -480px;
+        }
+
+        .box__item:nth-child(1):hover {
+            background-position: 0 -60px;
+        }
+
+        .box__item:nth-child(2):hover {
+            background-position: 0 -180px;
+        }
+
+        .box__item:nth-child(3):hover {
+            background-position: 0 -300px;
+        }
+
+        .box__item:nth-child(4):hover {
+            background-position: 0 -420px;
+        }
+
+        .box__item:nth-child(5):hover {
+            background-position: 0 -540px;
+        }
+        
+        .box__item--fade {
+            width: 100px;
             height: 60px;
-            position: absolute;
             background-color: black;
-            z-index: -1;
-            opacity: 0;
-            text-align: center;
-            line-height: 55px;
-            color: white;
-        }
-        .box3 {
-            width: 60px;
-            height: 60px;
-            background: url(sidemenu-icons.png);
-            transition: 0.01s;
-            background-position: 0px 360px;
-            float: right;
-           clear: both;
-           margin-right: 15px;
-           margin-top: 30px;
-        }
-        .box33
-        {
-            border-radius: 10px;
-            width: 110px;
-            height: 60px;
             position: absolute;
-            background-color: black;
+            left: 0;
+            transform: translateX(0px);
+            transition: transform linear 0.2s;
             z-index: -1;
-            opacity: 0;
-            text-align: center;
-            line-height: 55px;
+            border-radius: 2px;
             color: white;
-        }
-        .box4 {
-            width: 60px;
-            height: 60px;
-            background: url(sidemenu-icons.png);
-            transition: 0.01s;
-            background-position: 0px 240px;
-            float: right;
-           clear: both;
-           margin-right: 15px;
-           margin-top: 30px;
-        }
-        .box44
-        {
-            border-radius: 10px;
-            padding: 10px 30px;
-            position: absolute;
-            background-color: black;
-            z-index: -1;
-            opacity: 0;
             text-align: center;
-            line-height: 55px;
-            color: white;
-        }
-        .box5 {
-            width: 60px;
-            height: 60px;
-            background: url(sidemenu-icons.png);
-            transition: 0.01s;
-            background-position: 0px 120px;
-            float: right;
-           clear: both;
-           margin-right: 15px;
-           margin-top: 30px;
-        }
-        .box55
-        {
-            border-radius: 10px;
-            width: 110px;
-            height: 60px;
-            position: absolute;
-            background-color: black;
-            z-index: -1;
-            opacity: 0;
-            text-align: center;
-            line-height: 55px;
-            color: white;
-        }
-        .box1:hover{
-            background-position: 0 540px;
-        }
-        .box1:hover .box11
-        {
-            transition-duration: 0.5s;
-            transform: translateX(-111px);
-            opacity: 1;
-
-        }
-        .box2:hover {
-            background-position: 0 420px;
-            
-        }
-        .box2:hover .box22
-        {
-            transition-duration: 0.5s;
-            transform: translateX(-111px);
-            opacity: 1;
-
-        }
-        .box3:hover {
-            background-position: 0 300px;
-            
-        }
-        .box3:hover .box33
-        {
-            transition-duration: 0.5s;
-            transform: translateX(-111px);
-            opacity: 1;
-
-        }
-        .box4:hover {
-            background-position: 0 180px;
-        }
-        .box4:hover .box44
-        {
-            transition-duration: 0.5s;
-            transform: translateX(-90px);
-            opacity: 1;
-        }
-        .box5:hover {
-            background-position: 0 60px;
-        }
-        .box5:hover .box55
-        {
-            transition-duration: 0.5s;
-            transform: translateX(-111px);
-            opacity: 1;
-
+            line-height: 60px;
+            font-size: 16px;
+            font-weight: 300;
         }
 
-       
+        .box__item:hover .box__item--fade{
+            transform: translateX(-100px);
+        }
+        
     </style>
 </head>
 <body>
-  
-   <div class="wrap-box">
-    <div class="box1">
-        <div class="box11">ShowCase</div>
+    <div class="box">
+        <div class="box__item">
+            <div class="box__item--fade">Showcase</div>
+        </div>
+        <div class="box__item">
+            <div class="box__item--fade">Blog</div>
+        </div>
+        <div class="box__item">
+            <div class="box__item--fade">Questions</div>
+        </div>
+        <div class="box__item">
+            <div class="box__item--fade">Help</div>
+        </div>
+        <div class="box__item">
+            <div class="box__item--fade">Contact</div>
+        </div>
     </div>
-   
-    <div class="box2">
-        <div class="box22">Blog</div>
-    </div>
-    <div class="box3">
-        <div class="box33">Question</div>
-    </div>
-    <div class="box4">
-        <div class="box44">Help</div>
-    </div>
-    <div class="box5">
-        <div class="box55">Contact</div>
-    </div>
-    
-   </div>
-    
 </body>
-</html>`
+</html>
